@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta de Amor</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Montserrat:wght@300;400;600&display=swap');
+        
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f8e8e8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+        }
+        
+        .envelope {
+            position: relative;
+            width: 500px;
+            height: 250px;
+            background-color: #ec92c8c3;
+            border-radius: 5px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: all 0.5s ease;
+            z-index: 1;
+        }
+        
+        .envelope:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 180px;
+            height: 0;
+            border-left: 160px solid transparent;
+            border-right: 160px solid transparent;
+            border-top: 100px solid #e580bd;
+            transform-origin: top;
+            transition: all 0.5s ease;
+            z-index: 2;
+        }
+        
+        .envelope.open {
+            height: 500px;
+        }
+        
+        .envelope.open:before {
+            transform: rotateX(180deg);
+            z-index: 0;
+        }
+        
+        .letter {
+            position: absolute;
+            width: 90%;
+            height: 90%;
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+            box-sizing: border-box;
+            top: 5%;
+            left: 5%;
+            opacity: 0;
+            transition: all 0.5s ease 0.3s;
+            overflow-y: auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .envelope.open .letter {
+            opacity: 1;
+            height: 95%;
+        }
+        
+        .heart {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 80px;
+            color: white;
+            z-index: 3;
+            transition: all 0.3s ease;
+        }
+        
+        .envelope.open .heart {
+            opacity: 0;
+        }
+        
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            color: #f57dc5;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        .signature {
+            font-family: 'Dancing Script', cursive;
+            font-size: 24px;
+            text-align: right;
+            margin-top: 30px;
+            color: #e63946;
+        }
+        
+        .video-container {
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .video-placeholder {
+            width: 100%;
+            height: 200px;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        
+        .video-placeholder img {
+            width: 50px;
+            height: 50px;
+        }
+        
+        .video-instructions {
+            font-size: 14px;
+            color: #666;
+            text-align: center;
+            margin-top: 10px;
+        }
+        
+        .decoration {
+            position: absolute;
+            opacity: 0.1;
+            z-index: -1;
+        }
+        
+        .decoration.heart1 {
+            top: 10%;
+            left: 10%;
+            font-size: 30px;
+            color: #e63946;
+        }
+        
+        .decoration.heart2 {
+            bottom: 10%;
+            right: 10%;
+            font-size: 40px;
+            color: #e63946;
+        }
+        
+        .polaroid {
+            background: white;
+            padding: 15px 15px 40px 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transform: rotate(-5deg);
+            margin: 20px auto;
+            width: 80%;
+        }
+        
+        .polaroid img {
+            width: 100%;
+            height: auto;
+            border: 1px solid #eee;
+        }
+        
+        .polaroid-caption {
+            text-align: center;
+            font-family: 'Dancing Script', cursive;
+            margin-top: 10px;
+            color: #666;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="envelope">
+        <div class="heart">❤</div>
+        <div class="letter">
+            <h1>Para mi corazón</h1>
+            
+            <div class="polaroid">
+                <img src="amor.jpg" alt="Pareja feliz abrazándose en un atardecer en la playa, sonriendo y mirándose a los ojos con amor" />
+                <div class="polaroid-caption">Uno de mis momentos favoritos</div>
+            </div>
+            
+            <p>Querido Felipe,</p>
+            
+            <p>Como sabes hace mucho que no hacía esto, escribirte y menos de esta forma, quería hacer algo nuevo, ojalá te guste mucho. Quiero decir que te amo y es inevitable no hacerlo hemos pasado tanto tiempo juntos, ya van más de dos años, tantos recuerdos, canciones, vídeos, fotos, experencias juntos que me han marcado y siempre lo harán.</p>
+            
+            <p>Se que no soy la mejor en cualquier aspecto, y que me amas pero a veces no entiendo porque, cuál es la razón de que me ames; agradezco cada momento que he vivido contigo, las tardes en tu cuarto, las idas al cine, cuando nos fuimos a San Felipe, lo de los hoteles, todos esos recuerdos son tan lindos y me encantaría vivir más a tu lado.</p>
+            
+            <p>Eres mi gran amor, quiero que seas mi esposo, mejor ami, tal vez solo somos dos jovenes muy enamorados, pero si quiero cumplir eso contigo, te amo y te amo con todo mi corazón, se que nos peleamos y mucho, a veces nos alejamos por cosas que son muy tontas pero por favor, quedate conmigo y seamos felices, cumplamos nuestras metas juntos, tengamos una familia y una casita (obvio con los anillos de esposos más bonitos del mundo y una cama grande).</p>
+            
+            <div class="video-container">
+                    <video width="250" height="500" autoplay controls>
+                     <source src="video.mp4" type="video/mp4">
+                    Tu navegador no soporta el elemento de video.
+                    </video>
+                </div>
+            
+            <p>Prometo amarte en cada etapa de nuestra vida, en los momentos felices y en los difíciles, porque contigo quiero construir un futuro lleno de amor y felicidad, (perdón por ser a veces para no decir casi siempre difícil de amar y caprichosa).</p>
+            
+            <p>Con amor, Wendy</p>
+            <div class="signature">Tuya siempre</div>
+            
+            <div class="decoration heart1">❤</div>
+            <div class="decoration heart2">❤</div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('.envelope').addEventListener('click', function() {
+            this.classList.toggle('open');
+        });
+        
+        // Instrucciones para agregar un video
+        const videoPlaceholder = document.querySelector('.video-placeholder');
+        videoPlaceholder.addEventListener('click', function() {
+            const videoUrl = prompt('Pega aquí el enlace del video (YouTube, Vimeo, etc.):');
+            if (videoUrl) {
+                let videoHtml = '';
+                
+                if (videoUrl.includes('youtube') || videoUrl.includes('youtu.be')) {
+                    // Es un video de YouTube
+                    let videoId = '';
+                    if (videoUrl.includes('v=')) {
+                        videoId = videoUrl.split('v=')[1];
+                        const ampersandPosition = videoId.indexOf('&');
+                        if (ampersandPosition !== -1) {
+                            videoId = videoId.substring(0, ampersandPosition);
+                        }
+                    } else if (videoUrl.includes('youtu.be/')) {
+                        videoId = videoUrl.split('youtu.be/')[1];
+                    }
+                    
+                    videoHtml = `<iframe width="100%" height="200" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+                } else if (videoUrl.includes('vimeo')) {
+                    // Es un video de Vimeo
+                    const videoId = videoUrl.split('vimeo.com/')[1];
+                    videoHtml = `<iframe src="https://player.vimeo.com/video/${videoId}" width="100%" height="200" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>`;
+                } else {
+                    alert('Por favor, usa un enlace de YouTube o Vimeo.');
+                    return;
+                }
+                
+                this.innerHTML = videoHtml;
+                document.querySelector('.video-instructions').style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
